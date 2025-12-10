@@ -350,6 +350,29 @@ main {
     margin-bottom: 0;
 }
 
+.message-list {
+    list-style: none;
+    padding-left: 0;
+    margin: var(--spacing-sm) 0;
+}
+
+.message-list li {
+    font-size: 0.95rem;
+    color: #92400e;
+    margin-bottom: 0.5rem;
+    padding-left: 1.75rem;
+    position: relative;
+}
+
+.message-list li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: #f97316;
+    font-size: 1.1rem;
+}
+
 .message-box .disclaimer {
     font-size: 0.85rem;
     color: #b45309;
