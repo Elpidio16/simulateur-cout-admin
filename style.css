@@ -389,6 +389,14 @@ footer {
     margin-top: var(--spacing-lg);
 }
 
+footer p {
+    margin: 0;
+}
+
+footer i {
+    font-style: italic;
+}
+
 /* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 768px) {
     header h1 {
