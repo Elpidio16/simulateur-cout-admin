@@ -1,0 +1,43 @@
+# Système d'exploitation
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE & Éditeurs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+.atom/
+
+# Node (si utilisation)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environnement
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+.cache/
+dist/
+build/
+
+# OS spécifiques Windows
+desktop.ini

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur de Coût Administratif</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simulateur de Coût Administratif</h1>
+            <p class="subtitle">Mesurez le coût réel de votre administratif en temps et en argent</p>
+        </header>
+
+        <main>
+            <!-- Section des inputs -->
+            <section class="input-section">
+                <div class="input-group">
+                    <label for="hoursSlider">Heures d'administratif par semaine</label>
+                    <div class="slider-wrapper">
+                        <input 
+                            type="range" 
+                            id="hoursSlider" 
+                            min="0" 
+                            max="10" 
+                            value="5" 
+                            step="0.5"
+                            class="slider"
+                        >
+                        <div class="slider-value">
+                            <span id="hoursValue">5</span> h/semaine
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Valeur d'une heure de travail</label>
+                    <div class="buttons-group">
+                        <button class="btn-rate" data-rate="30">30 €</button>
+                        <button class="btn-rate" data-rate="50">50 €</button>
+                        <button class="btn-rate active" data-rate="70">70 €</button>
+                        <button class="btn-rate" data-rate="100">100 €</button>
+                    </div>
+                    <div class="custom-rate">
+                        <input 
+                            type="number" 
+                            id="customRate" 
+                            placeholder="Autre montant (€)"
+                            min="0"
+                            step="1"
+                        >
+                        <span class="currency-symbol">€</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section des résultats -->
+            <section class="results-section">
+                <h2>Vos résultats</h2>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-label">Temps administratif</div>
+                        <div class="result-label-period">par mois</div>
+                        <div class="result-value">
+                            <span id="monthlyHours">20</span>
+                            <span class="result-unit">h</span>
+                        </div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-label">Coût administratif</div>
+                        <div class="result-label-period">par mois</div>
+                        <div class="result-value">
+                            <span id="monthlyCost">1 400</span>
+                            <span class="result-unit">€</span>
+                        </div>
+                    </div>
+
+                    <div class="result-card highlight">
+                        <div class="result-label">Coût administratif</div>
+                        <div class="result-label-period">par an</div>
+                        <div class="result-value-large">
+                            <span id="yearlyCost">16 800</span>
+                            <span class="result-unit">€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message pédagogique -->
+                <div class="message-box">
+                    <p><strong>💡 À savoir :</strong> Ce coût est invisible, mais bien réel. Chaque heure passée sur l'administratif est une heure non facturée ou non vécue.</p>
+                    <p class="disclaimer"><em>Résultat estimatif basé sur les hypothèses : 1 mois = 4 semaines.</em></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Simulateur simple et pédagogique - Aucune donnée enregistrée</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
